@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> SRS </title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="root">
+        <header id='header'>
+            <p>
+                Support Request System
+            </p>
+        </header>
+        <div class="tab">
+            <button id='default' class="tab-link form active">Form</button>
+            <button class="tab-link calls">Chamados</button>
+        </div>
+        <main role='main' id='main' class='tab-content form'>
+            <form>
+                <h1>Solicitação de Suporte</h1>
+                <fieldset>
+                    <legend>
+                        <h2>Dados</h2>
+                    </legend>
+                    <div class="field">
+                        <label for="name">Nome do Solicitante</label>
+                        <input type="text" name="name" id="name" placeholder="Digite o seu nome" required/>
+                    </div>
+                    <div class="field">
+                        <label for="subject">Assunto</label>
+                        <input type="text" name="subject" id="subject" placeholder="Digite o assunto" required/>
+                    </div>
+                    <div class="field">
+                        <label for="description">Descrição</label>
+                        <textarea name="description" id="description" cols="30" rows="5" placeholder="Descreva sua solicitação" required></textarea>
+                    </div>
+                </fieldset>
+                <button type="submit">Enviar</button>
+                <button type="reset">Cancelar</button>
+            </form>
+        </main>
+        <main role='main' id='call-table' class='tab-content calls'>
+            <h1>Solicitações em Aberto</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>
+                            Solicitante
+                        </th>
+                        <th>
+                            Assunto
+                        </th>
+                        <th>
+                            Descrição
+                        </th>
+                        <th>
+                            Solução
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

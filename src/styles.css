@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;700&family=Pacifico");
+:root {
+    --color-turquoise: #00ae9d;
+    --color-medium-green: #7db61c;
+    --color-light-green: #c9d200;
+    --color-dark-green: #003641;
+    --color-purple: #49479d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--color-dark-green);
+    height: 100%;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+body,
+a,
+input,
+textarea,
+button {
+    font-family: Asap, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 3rem;
+    width: 100%;
+    padding-left: 3.2rem;
+    background: var(--color-turquoise);
+    color: white;
+    font: 700 1.5rem Asap;
+}
+
+.tab {
+    overflow: hidden;
+    width: 100%;
+    background: var(--color-dark-green);
+}
+
+.tab button {
+    background: inherit;
+    float: left;
+    cursor: pointer;
+    padding: 1rem 3.2rem;
+    transition: 0.3s;
+    font-size: 1rem;
+    color: white;
+}
+
+.tab button:hover {
+    background: var(--color-medium-green);
+    font-weight: bold;
+}
+
+.tab button.active {
+    color: var(--color-dark-green);
+    background: white;
+}
+
+#main {
+    width: 100%;
+    max-width: 70rem;
+    margin: 0 auto;
+}
+
+#main form {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    padding: 1rem 1.5rem;
+    max-width: 50rem;
+    background: var(--color-medium-green);
+    border-radius: 0.5rem;
+}
+
+#main form h1,
+#call-table h1 {
+    font: 2rem 'Pacifico';
+}
+
+#main form fieldset {
+    margin-top: 1.25rem;
+    min-inline-size: auto;
+}
+
+#main form fieldset legend {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#main form fieldset legend h2 {
+    font-size: 1.5rem;
+}
+
+#main form fieldset .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
+}
+
+#main form fieldset .field input[type=text],
+#main form fieldset .field textarea {
+    flex: 1;
+    background: white;
+    border-radius: 0.5rem;
+    margin: 0.5rem 0;
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    color: var(--color-dark-green);
+}
+
+#main form fieldset .field textarea {
+    resize: none;
+}
+
+#main form fieldset .field input::placeholder,
+#main form fieldset .field textarea::placeholder {
+    color: var(--color-turquoise);
+}
+
+#main form button {
+    height: 2rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    transition: opacity 0.2s;
+    cursor: pointer;
+}
+
+#main form button[type=submit] {
+    background: var(--color-dark-green);
+}
+
+#main form button[type=reset] {
+    background: red;
+}
+
+#main form button:hover {
+    opacity: 0.85;
+}
+
+#call-table {
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+#call-table h1 {
+    display: flex;
+    justify-content: center;
+}
+
+#call-table table {
+    width: 100%;
+    background: var(--color-dark-green);
+    color: white;
+    border-radius: 0.5rem;
+    border: collapse;
+    white-space: nowrap;
+}
+
+#call-table table td,
+#call-table table th {
+    text-align: center;
+    padding: 0.5rem;
+}
+
+#call-table table td {
+    border-right: 0.1rem solid var(--color-dark-green);
+    max-width: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#call-table table thead th {
+    background: var(--color-light-green);
+}
+
+#call-table table thead th:nth-child(odd) {
+    background: var(--color-medium-green);
+}
+
+#call-table table tr:nth-child(even) {
+    background: #004351;
+}
+
+#call-table table tbody tr button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--color-light-green);
+    background: none;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#call-table table tbody tr button:hover {
+    background: var(--color-medium-green);
+    color: white;
+}
+
+.tab-content {
+    display: none;
+}
+
+.active {
+    display: block;
+}
